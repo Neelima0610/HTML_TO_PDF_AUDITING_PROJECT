@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summary List</title>
+    <script src="script.js"></script>
+    
+        <style>
+            table,th,td
+            {
+                border : 1px solid black;
+                
+                border-collapse : collapse;
+                
+                background-color :#A5C2DB;
+            }
+            .no-border-right {
+  border-right: solid 1px #FFF;
+   border-left: solid 1px #FFF;
+  
+}
+tr.no
+{
+     border: 0;
+}
+tr.noBorder td {
+  border: 0;
+}
+
+         .line
+{
+     position : absolute;
+    height:90px;
+    top :80px;
+}
+#s
+{
+            
+    top : 10px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button2 {
+  background-color: white; 
+  color: black; 
+  width:170px;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+        </style>
+ 
+</head>
+<body bgcolor="#A9A9A9">
+
+    <center><h1>Welcome to Auditing</h1></center><br><br>
+        <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="button button2" onClick="parent.location='main1.html'">Summary<br><br>List</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <button class="button button2" onClick="parent.location='aud.html'">Introduction <br>& <br>Company Profile</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="button button2" onClick="parent.location='main3.html'">Inventory Control <br>to<br>Insurance Coverage</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button button2" onClick="parent.location='main4.html'">Drawing Power Computation & <br>Banking Conduct</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button button2" onClick="parent.location='main5.html'">Financial<br><br>Information 1<br></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button button2" onClick="parent.location='main6.html'">Financial<br><br>Information2<br></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><center><button class="button button2" onClick="parent.location='main7.html'"><br>Annexure-1<br><br></button><button class="button button2" onClick="parent.location='main8.html'"><br>Annexure-2<br><br></button></center></div>
+          <br><br><br><br><br><br><br><br>
+               <form action="audit.php" method="POST">
+                  <center>
+               <h1>SUMMARY LIST</h1>
+               <table width="60%">
+               <tr><th colspan="3">Summary List</th></tr>
+               <tr>
+                   <th style="text-align:center;">Sl.No</th><th style="text-align:center;">Particulars</th><th style="text-align:center;">Page No.</th>
+               </tr>
+               <tr>
+                   <td style="text-align:center;">1</td><td style="text-align:center;height:30px;width:300px;">Company Profile</td><td><input type="number" max-length="3" name="pno1" style="height:30px;width:99%;"  required></td>
+               </tr>
+               
+               <tr>
+                   <td style="text-align:center;">2</td><td style="text-align:center;height:30px;width:300px;">Executive Summary</td><td><input type="number" max-length="3" name="pno2" style="height:30px;width:99%;"  required></td>
+                </tr>
+               
+               <tr>
+                   <td style="text-align:center;">3</td><td style="text-align:center;height:30px;width:300px;">Inventory Control</td><td><input type="number" max-length="3" name="pno3" style="height:30px;width:99%;" required></td>
+                   
+            </tr>
+               
+               <tr>
+                   <td style="text-align:center;">4</td><td style="text-align:center;height:30px;width:300px;">Book Keeping</td><td><input type="number" max-length="3" name="pno4" style="height:30px;width:99%;"  required></td>
+              </tr>
+               
+               <tr>
+                   <td style="text-align:center;">5</td><td style="text-align:center;height:30px;width:300px;">Insurance Coverage</td><td><input type="number" max-length="3" name="pno5" style="height:30px;width:99%;"  required></td>
+              </tr>
+               
+               <tr>
+                   <td style="text-align:center;">6</td><td style="text-align:center;height:30px;width:300px;">Drawing Power</td><td><input type="number" max-length="3" name="pno6" style="height:30px;width:99%;"  required></td>
+                   </tr>
+               
+               <tr>
+                   <td style="text-align:center;">7</td><td style="text-align:center;height:30px;width:300px;">Banking Conduct</td><td><input type="number" max-length="3" name="pno7" style="height:30px;width:99%;"  required></td>
+               </tr>
+               
+               <tr>
+                   <td style="text-align:center;">8</td><td style="text-align:center;height:30px;width:300px;">Financial Information</td><td><input type="number" name="pno8" max-length="3" style="height:30px;width:99%;"  required></td>
+            </tr>
+               
+                <tr>
+                    <td style="text-align:center;">9</td><td style="text-align:center;height:30px;width:300px;">Annexures</td><td><input type="number" max-length="3" name="pno9" style="height:30px;width:99%;"  required></td>
+             </tr>
+            </table>
+            <br><br><br>
+               <input type="submit" value="NEXT"  style="height:50px;width:160px;background-color:green;color:white;border-radius:5px;"/>
+            </center>
+         </form>   
+      </body>      
+            </html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Information</title>
+  
+    
+        <style>
+            table,th,td
+            {
+                border : 1px solid black;
+                
+                border-collapse : collapse;
+                
+                background-color : #A5C2DB;
+            }
+            .no-border-right {
+  border-right: solid 1px #FFF;
+   border-left: solid 1px #FFF;
+  
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button2 {
+  background-color: white; 
+  color: black; 
+  width:170px;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+</style>
+<script>
+    function year1(that)
+    {
+        var a = document.getElementById("year5").value;
+        
+        var year1 = a.toString().substr(-2);
+        
+         document.getElementById("m1").value = year1;
+         document.getElementById("m12").value = year1;
+         document.getElementById("m13").value = year1;
+         document.getElementById("m14").value = year1;
+         document.getElementById("m15").value = year1;
+         document.getElementById("m16").value = year1;
+         document.getElementById("m17").value = year1;
+         document.getElementById("m18").value = year1;
+         document.getElementById("m19").value = year1;
+         
+         var b = document.getElementById("year6").value;
+         var year2 = b.toString().substr(-2);
+         document.getElementById("m110").value = year2;
+         document.getElementById("m111").value = year2;
+         document.getElementById("m112").value = year2;
+    }
+    function year2(that)
+    {
+        var a = document.getElementById("year7").value;
+        
+        var year1 = a.toString().substr(-2);
+        
+         document.getElementById("m2").value = year1;
+         document.getElementById("m22").value = year1;
+         document.getElementById("m23").value = year1;
+         document.getElementById("m24").value = year1;
+         document.getElementById("m25").value = year1;
+         document.getElementById("m26").value = year1;
+         document.getElementById("m27").value = year1;
+         document.getElementById("m28").value = year1;
+         document.getElementById("m29").value = year1;
+         
+         
+        var b = document.getElementById("year8").value;
+        
+        var year2 = b.toString().substr(-2);
+        document.getElementById("m210").value = year2;
+        document.getElementById("m211").value = year2;
+        document.getElementById("m212").value = year2;
+    }	
+    function val(that)
+    {
+        
+        var a = document.getElementById("fy1").value;
+        var b = document.getElementById("fy12").value;
+        var c = document.getElementById("fy13").value;
+        var d = document.getElementById("fy14").value;
+        var e = document.getElementById("fy15").value;
+        var f = document.getElementById("fy16").value;
+        var g = document.getElementById("fy17").value;
+        var h = document.getElementById("fy18").value;
+        var i = document.getElementById("fy19").value;
+        var j = document.getElementById("fy110").value;
+        var k = document.getElementById("fy111").value;
+        var l = document.getElementById("fy112").value;
+        
+        var to1 = +a + +b + +c + +d + +e + +f + +g + +h + +i + +j + +k + +l;
+        
+        document.getElementById("tota").value = to1;
+    }
+ function bal(that)    
+ {
+        var a = document.getElementById("fy2").value;
+        var b = document.getElementById("fy22").value;
+        var c = document.getElementById("fy23").value;
+        var d = document.getElementById("fy24").value;
+        var e = document.getElementById("fy25").value;
+        var f = document.getElementById("fy26").value;
+        var g = document.getElementById("fy27").value;
+        var h = document.getElementById("fy28").value;
+        var i = document.getElementById("fy29").value;
+        var j = document.getElementById("fy210").value;
+        var k = document.getElementById("fy211").value;
+        var l = document.getElementById("fy212").value;
+        
+        var to1 = +a + +b + +c + +d + +e + +f + +g + +h + +i + +j + +k + +l;
+        
+        document.getElementById("totb").value = to1;
+    
+    
+    }
+</script>
+</head>
+<body bgcolor="#A9A9A9">
+   
+    <center><h1>Welcome to Auditing</h1></center><br><br>
+        <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="button button2" onClick="parent.location='main1.html'">Summary<br><br>List</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <button class="button button2" onClick="parent.location='aud.html'">Introduction <br>& <br>Company Profile</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="button button2" onClick="parent.location='main3.html'">Inventory Control <br>to<br>Insurance Coverage</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button button2" onClick="parent.location='main4.html'">Drawing Power Computation & <br>Banking Conduct</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button button2" onClick="parent.location='main5.html'">Financial<br><br>Information 1<br></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button button2" onClick="parent.location='main6.html'">Financial<br><br>Information2<br></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><center><button class="button button2" onClick="parent.location='main7.html'"><br>Annexure-1<br><br></button><button class="button button2" onClick="parent.location='main8.html'"><br>Annexure-2<br><br></button></center></div>
+          <br><br>
+ <h1 style="text-align:center;">Particulars of sales for last ten months. (Rs in lakhs)</h1>
+       <form action="fil.php" method="POST">
+       	<center>
+           <table width="60%" align="center">																	
+           <tr class="teb"><th style="width:160px;text-align:center;" class="teb">Sl.no</th><th class="teb" style="text-align:center;">Month</th><th class="teb"  style="text-align:center;">FY<input type="number" min="1989" max="2098" name="year5" id="year5" style="height:30px;width:98%;" onchange="year1(this);"><br>-<br><input type="number" min="00" max="98" name="year6" id="year6" style="height:30px;width:98%;" onchange="year1(this);" ></th><th class="teb"  style="text-align:center;">Month</th><th class="teb"  style="text-align:center;">FY<input type="number" min="1989" max="2098" name="year7" id="year7" style="height:30px;width:98%;" onchange="year2(this);"><br>-<br><input type="number" min="00" max="98" name="year8" id="year8" style="height:30px;width:98%;" onchange="year2(this);"></th></tr>
+           <tr class="teb"><td style="text-align:center;">01</td><td>Apr -&nbsp;&nbsp;<input type="number" style="width:30%;" name="m1" id="m1" readonly></td><td><input type="number" step="0.01" name="fy1" id="fy1" style="width:98%;height:30px;" ></td><td>Apr -  &nbsp; &nbsp;<input type="number" style="width:30%;" name="m2" id="m2" readonly></td><td><input type="number" step="0.01" name="fy2" id="fy2" style="width:98%;height:30px;"></td></tr>
+           
+           <tr class="teb"><td style="text-align:center;">02</td><td>May -   <input type="number" style="width:30%;" name="m12" id="m12" readonly></td><td><input type="number" step="0.01" name="fy12" id="fy12" style="width:98%;height:30px;"></td><td>May - <input type="number" style="width:30%;" name="m22" id="m22" readonly></td><td><input type="number" step="0.01" name="fy22" id="fy22" style="width:98%;height:30px;"></td></tr>
+           
+           <tr class="teb"><td style="text-align:center;">03</td><td>Jun -  &nbsp;  <input type="number" style="width:30%;" name="m13" id="m13" readonly></td><td><input type="number" step="0.01" name="fy13" id="fy13" style="width:98%;height:30px;" ></td><td>Jun -     &nbsp; <input type="number" style="width:30%;" name="m23" id="m23" readonly></td><td><input type="number" step="0.01" name="fy23" id="fy23" style="width:98%;height:30px;" ></td></tr>
+           
+           <tr class="teb"><td style="text-align:center;">04</td><td>Jul - &nbsp;&nbsp;   <input type="number" style="width:30%;" name="m14" id="m14" readonly></td><td><input type="number" step="0.01" name="fy14" id="fy14" style="width:98%;height:30px;"></td><td>Jul -  &nbsp;&nbsp;  <input type="number" style="width:30%;" name="m24" id="m24" readonly></td><td><input type="number" step="0.01" name="fy24" id="fy24" style="width:98%;height:30px;"></td></tr>
+           
+           <tr class="teb"><td style="text-align:center;">05</td><td>Aug -  &nbsp; <input type="number" style="width:30%;" name="m15" id="m15" readonly></td><td><input type="number" step="0.01" name="fy15" id="fy15" style="width:98%;height:30px;" ></td><td>Aug - &nbsp;  <input type="number" style="width:30%;" name="m25" id="m25" readonly></td><td><input type="number" step="0.01" name="fy25" id="fy25" style="width:98%;height:30px;"></td></tr>
+           
+           <tr class="teb"><td style="text-align:center;">06</td><td>Sep -  &nbsp;&nbsp;  <input type="number" style="width:30%;" name="m16" id="m16" readonly></td><td><input type="number" step="0.01" name="fy16" id="fy16" style="width:98%;height:30px;" ></td><td>Sep -    <input type="number" style="width:30%;" name="m26" id="m26" readonly></td><td><input type="number" step="0.01" name="fy26" id="fy26" style="width:98%;height:30px;"></td></tr>
+           
+           <tr class="teb"><td style="text-align:center;">07</td><td>Oct -  &nbsp;&nbsp;  <input type="number" style="width:30%;" name="m17" id="m17" readonly></td><td><input type="number" step="0.01" name="fy17" id="fy17" style="width:98%;height:30px;" ></td><td>Oct -    <input type="number" style="width:30%;" name="m27" id="m27" readonly></td><td><input type="number" step="0.01" name="fy27" id="fy27" style="width:98%;height:30px;"></td></tr>
+           
+           <tr class="teb"><td style="text-align:center;">08</td><td>Nov -   <input type="number" style="width:30%;" name="m18" id="m18" readonly></td><td><input type="number" step="0.01" name="fy18" id="fy18" style="width:98%;height:30px;" ></td><td>Nov -   <input type="number" style="width:30%;" name="m28" id="m28" readonly></td><td><input type="number" step="0.01" name="fy28" id="fy28" style="width:98%;height:30px;"></td></tr>
+           
+           <tr class="teb"><td style="text-align:center;">09</td><td>Dec -   &nbsp; <input type="number" style="width:30%;" name="m19" id="m19" readonly></td><td><input type="number" step="0.01" name="fy19" id="fy19" style="width:98%;height:30px;" ></td><td>Dec -  &nbsp;  <input type="number" style="width:30%;" name="m29" id="m29" readonly></td><td><input type="number" step="0.01" name="fy29"  id="fy29" style="width:98%;height:30px;"></td></tr>
+           
+           <tr class="teb"><td style="text-align:center;">10</td><td>Jan -   &nbsp;&nbsp; <input type="number" style="width:30%;" name="m110" id="m110" readonly></td><td><input type="number" step="0.01" name="fy110" id="fy110" style="width:98%;height:30px;"></td><td>Jan -  &nbsp;&nbsp;  <input type="number" style="width:30%;" name="m210" id="m210" readonly></td><td><input type="number" step="0.01" name="fy210" id="fy210" style="width:98%;height:30px;"></td></tr>
+           
+           <tr class="teb"><td style="text-align:center;">11</td><td>Feb -  &nbsp;&nbsp;  <input type="number" style="width:30%;" name="m111" id="m111" readonly></td><td><input type="number" step="0.01" name="fy111" id="fy111" style="width:98%;height:30px;"></td><td>Feb -  &nbsp;&nbsp;  <input type="number" style="width:30%;" name="m211" id="m211" readonly></td><td><input type="number" step="0.01" name="fy211" id="fy211" style="width:98%;height:30px;"></td></tr>
+           
+           <tr class="teb"><td style="text-align:center;">12</td><td>Mar -  &nbsp; <input type="number" style="width:30%;" name="m112" id="m112" readonly></td><td><input type="number" step="0.01" name="fy112" id="fy112" style="width:98%;height:30px;" onchange="val(this);"></td><td>Mar -  &nbsp; <input type="number" style="width:30%;" name="m212" id="m212" readonly></td><td><input type="number" step="0.01" name="fy212" style="width:98%;height:30px;" id="fy212" onchange="bal(this);"></td></tr>
+           <tr><th>Total</th><td></td><td><input type="number" step="0.01" name="tota" id="tota" style="width:98%;height:30px;"></td><td></td><td><input type="number" step="0.01" name="totb" id="totb" style="width:98%;height:30px;"></td></tr>
+       </table>
+       <br><br>
+       <input type="submit" value="SAVE"  style="height:50px;width:160px;background-color:green;color:white;border-radius:5px;" />
+       </center>
+       </form>
+       </body>
+       </html>

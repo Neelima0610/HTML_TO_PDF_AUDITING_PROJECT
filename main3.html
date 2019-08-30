@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Control to Insurance Coverage</title>
+       <script src="script.js"></script>
+    
+        <style>
+        table,th,td
+        {
+            border-collapse:collapse;
+        }
+            .no-border-right {
+  border-right: solid 1px #FFF;
+   border-left: solid 1px #FFF;
+  
+}
+.teb
+{
+   border : 1px solid black;
+    background-color:#A5C2DB;
+     border-collapse : collapse;
+}
+.exec
+{
+    border : 1px solid black;
+    background-color: #A5C2DB;
+     border-collapse : collapse;
+}
+ .tab
+ {
+   background-color:#A9A9A9;  
+   border : white;
+ }
+  
+         .line
+{
+     position : absolute;
+    height:90px;
+    top :80px;
+}
+#s
+{
+            
+    top : 10px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button2 {
+  background-color: white; 
+  color: black; 
+  width:170px;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+        </style>
+               <script>
+  
+  function display(that) {
+   var a =  document.getElementById("cash").value;
+   var b =  document.getElementById("term").value;
+   var c = +a + +b;
+   document.getElementById("total").value = c;
+     
+}
+function calculate(that) {
+   var a =  document.getElementById("raw").value;
+   var b =  document.getElementById("wip").value;
+   var c =  document.getElementById("fs").value;
+   var d = +a + +b + +c;
+   document.getElementById("total1").value = d;
+     
+}
+        </script>
+ </head>
+ <body bgcolor="#A9A9A9">            
+ 
+    <center><h1>Welcome to Auditing</h1></center><br><br>
+        <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="button button2" onClick="parent.location='main1.html'">Summary<br><br>List</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <button class="button button2" onClick="parent.location='aud.html'">Introduction <br>& <br>Company Profile</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="button button2" onClick="parent.location='main3.html'">Inventory Control <br>to<br>Insurance Coverage</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button button2" onClick="parent.location='main4.html'">Drawing Power Computation & <br>Banking Conduct</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button button2" onClick="parent.location='main5.html'">Financial<br><br>Information 1<br></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button button2" onClick="parent.location='main6.html'">Financial<br><br>Information2<br></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><center><button class="button button2" onClick="parent.location='main7.html'"><br>Annexure-1<br><br></button><button class="button button2" onClick="parent.location='main8.html'"><br>Annexure-2<br><br></button></center></div>
+          <br><br><br><br>
+<br><br><br>          <form action="exec.php" method="POST">
+                <center>
+            
+
+ <h2><b>2.<u>Executive Summary</u></b></h2>
+            <table width="60%" class="exec">
+                
+               <tr class="exec"><td class="exec" style="text-align:center;">Visited & Verified by</td><td class="exec" style="width:400px;"><TextArea name="vis" style="height:30px;width:400px;" required></TextArea></td></tr>
+               <tr class="exec"><td class="exec" style="text-align:center;">Whom he contacted &
+his/her designation
+</td><td class="exec"><TextArea name="who" style="height:30px;width:400px;" required></TextArea></td></tr>
+               <tr class="exec"><td class="exec" style="text-align:center;">Date of visit</td><td class="exec"><input type="date" name="dov" style="height:30px;width:400px;" required></td></tr>
+               <tr class="exec"><td class="exec" style="text-align:center;">Place of office visited</td><td class="exec"><TextArea name="pofv" style="height:30px;width:400px;" required></TextArea></td></tr>
+                <tr class="exec"><td class="exec" style="text-align:center;">Customer co-operation</td><td class="exec"><input type="text" name="ccop" style="height:30px;width:400px;" required></td></tr>
+               <tr class="exec"><td class="exec" style="text-align:center;">Facility Availed with
+<input type="text" name="bank" style="width:60px;"> Bank</td>
+<td class="exec"><table  width="100%"><tr class="exec"><th colspan="2" style="text-align:center;">Faculty Sactioned Details</th></tr>
+<tr class="exec"><th  style="text-align:center;">Particulars</th><th>Values in Lakhs</th></tr>
+<tr class="exec"><td class="exec"  style="text-align:center;">Cash Credit</td><td class="exec"><input type="number" max-length="100" name="cash" id="cash" style="width:99%" onchange="display(this);" required></td></tr>
+<tr class="exec"><td class="exec"  style="text-align:center;">Term Loan</td><td class="exec"><input type="number" max-length="100" name="term" id="term" style="width:99%" onchange="display(this);" required></td></tr>
+<tr class="exec"><th  style="text-align:center;">Total</th><td class="exec"><input type="number" max-length="100" name="tot" id="total"  style="width:99%" readonly>
+</td></tr>
+</table></td></tr>
+              
+               <tr class="exec"><td class="exec" style="text-align:center;">Others</td><td class="exec"><input type="text" name="others1" style="height:30px;width:400px;" required><br>
+               <input type="text" name="others12" style="height:30px;width:400px;" ><br>
+               <input type="text" name="others13" style="height:30px;width:400px;" ><br>
+               <input type="text" name="others14" style="height:30px;width:400px;" ><br>
+               <input type="text" name="others15" style="height:30px;width:400px;" ><br>
+               <input type="text" name="others16" style="height:30px;width:400px;" ><br></td></tr>
+              
+               </table>
+            <br><br>
+               
+            <h2><b>3.<u>Inventory Control</u></b></h2>
+            <h3><b>A. Comments on Quantity & value of goods as on <input type="date" name="date1" required></b></h3>
+            <table width="60%" class="exec"><tr class="exec"><tr class="exec"><th class="exec" style="text-align:center;">Particulars</th><th class="exec" style="text-align:center;">Value(in lakhs)</th></tr>
+            <tr ><td class="exec">Raw materials & Packaging materials</td><td style="width:400px;"><input type="number" name="raw" id="raw" style="height:30px;width:400px;" onchange="calculate(this);" required></td></tr>
+            <tr class="exec"><td class="exec">Work In Progress</td><td class="exec"><input type="number" name="wip" id="wip" style="height:30px;width:400px;" onchange="calculate(this);" required></td></tr>
+            <tr class="exec"><td class="exec">Finished stock</td><td class="exec"><input type="number" name="fs" id="fs" style="height:30px;width:400px;" onchange="calculate(this);" required></td></tr>
+            <tr class="exec"><td class="exec">TOTAL</td><td class="exec"><input type="number" name="total2" id="total1" style="height:30px;width:400px;" required></td></tr>
+            </table><br><br>
+            <table width="60%"  class="tab">
+            <tr class="tab"><td class="tab"><h3><b>B. Method of costing applied.</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="3" cols="90" name="in3b" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>C. Whether stocks are properly stored. </b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="3" cols="90" name="in3c" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>D. Comments on holding level of inventory by the borrower company vis-à-vis
+the industry.</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="3" cols="90" name="in3d" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>E. Bifurcation of Closing Stock at various locations/god owns as declared by
+the borrower:</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="3" cols="90" name="in3e" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>F. Observation on marketability & salability of stock.</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="3" cols="90" name="in3f" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>G. Manufacturing process in brief. </b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="3" cols="90" name="in3g" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>H. Whether the Borrower holds any stock received for processing (job work)<br>
+and whether they are separately stored - Please Comment.</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="3" cols="90" name="in3h" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>I. If so, whether it is so declared and deducted from the total stock. Please
+Comment.</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="3" cols="90" name="in3i" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>J. Whether consumption of Raw materials is commensurate<br> with production
+activity & other production expenses. </b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="3" cols="90" name="in3j" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>K. Brief comments on description of production activity, whether there<br> were
+any special events like, breakdown in production activity, loss of materials
+and<br> other relevant issues, which are relevant to the financing, bank.</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="3" cols="90" name="in3k" required></TextArea></td></tr>
+            </table>
+            <br><br>
+            <h3><b>4.<u>Book Keeping</u></b></h3><br><br>
+            <table width="60%">
+            <tr><td><h3><b>A. If the data is stored in computer system, the safety features/measures in<br>
+force to prevent any manipulative corrections / changes to be commented
+upon.</b></h3></tr>
+            <tr><td><TextArea rows="4" cols="90" name="in4a" required></TextArea></td></tr>
+            <tr><td><h3><b>B. Any qualifying comment of the statutory auditors of the company regarding<br>
+maintenance of books of accounts and Accounting policy adopted by the
+Borrower.<br> This should be commented.</b></h3></tr>
+            <tr><td><TextArea rows="4" cols="90" name="in4b" required></TextArea></td></tr>
+            <tr><td><h3><b>C. Whether borrowers record maintenance of Stock and Accounting is
+satisfactory.<br> Please comment whether there are any deficiencies.</b></h3></tr>
+            <tr><td><TextArea rows="4" cols="90" name="in4c" required></TextArea></td></tr>
+            <tr><td><h3><b>D. Whether stock book is maintained up to date. Please Comment.</b></h3></tr>
+            <tr><td><TextArea rows="4" cols="90" name="in4d" required></TextArea></td></tr>
+            <tr><td><h3><b> E. Whether purchase/sale invoices are verified. Whether valuation of
+purchase<br> is correct whether overvaluation of purchase is done. Please
+Comment.</b></h3></tr>
+            <tr><td><TextArea rows="4" cols="90" name="in4e" required></TextArea></td></tr>
+            <tr><td><h3><b>F. Whether there are any purchases from allied /sister firms.<br> Whether all such
+transactions are genuine? Please Comment.
+</b></h3></tr>
+            <tr><td><TextArea rows="4" cols="90" name="in4f" required></TextArea></td></tr>
+           
+           </table>
+           <br><h3><b>5.<u>Insurance Coverage</u></b></h3>
+           <table class="teb"><tr class="teb"><th class="teb">Name of the <br>Insurance <br>Company<br></th><th class="teb" >Location of<br>Risk covered</th><th class="teb">Valid upto</th><th>Policy Number</th><th class="teb">Asset covered</th><th class="teb">Insured amount</th></tr>
+           <tr class="teb">
+           <td class="teb" style="height:60px;"><TextArea name="noic" style="height:60px;" required></TextArea></td>
+           <td class="teb" style="height:60px;"><TextArea name="lorc" style="height:60px;" required></TextArea></td>
+           <td class="teb" style="height:60px;"><TextArea name="valid" style="height:60px;" required></TextArea></td>
+           <td class="teb" style="height:60px;"><TextArea name="pn" style="height:60px;" required></TextArea></td>
+           <td class="teb" style="height:60px;"><TextArea name="asset" style="height:60px;" required></TextArea></td>
+           <td class="teb" style="height:60px;"><TextArea name="insure" style="height:60px;" required></TextArea></td>
+           </tr>
+           
+           
+           </table>
+           <br><br><br><br>
+         
+            <input type="submit" value="NEXT"  style="height:50px;width:160px;background-color:green;color:white;border-radius:5px;"/>
+           </center>
+           </form>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Information</title>
+  
+    
+        <style>
+            table,th,td
+            {
+                border : 1px solid black;
+                
+                border-collapse : collapse;
+                
+                background-color : #A5C2DB;
+            }
+            .no-border-right {
+  border-right: solid 1px #FFF;
+   border-left: solid 1px #FFF;
+  
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button2 {
+  background-color: white; 
+  color: black; 
+  width:170px;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+</style>
+<script>
+    function saud(that)
+    {
+        var a = document.getElementById("saud1").value;
+        var b = document.getElementById("saud2").value;
+        var c = a-b;
+         document.getElementById("sin").value = c.toFixed(2);
+        if(a>b)
+        {
+            var d = (c/a)*100;
+            document.getElementById("sinp").value = d.toFixed(2);
+        }
+        else
+        {
+            var d = (c/b)*100;
+             document.getElementById("sinp").value = d.toFixed(2);
+        }
+    }
+    function paud(that)
+    {
+        var a = document.getElementById("paud1").value;
+        var b = document.getElementById("paud2").value;
+        var c = a-b;
+         document.getElementById("pin").value = c.toFixed(2);
+        if(a>b)
+        {
+            var d = (c/a)*100;
+            document.getElementById("pinp").value = d.toFixed(2);
+        }
+        else
+        {
+            var d = (c/b)*100;
+             document.getElementById("pinp").value = d.toFixed(2);
+        }
+    }
+    function daud(that)
+    {
+        var a = document.getElementById("daud1").value;
+        var b = document.getElementById("daud2").value;
+        var c = a-b;
+         document.getElementById("din").value = c.toFixed(2);
+        if(a>b)
+        {
+            var d = (c/a)*100;
+            document.getElementById("dinp").value = d.toFixed(2);
+        }
+        else
+        {
+            var d = (c/b)*100;
+             document.getElementById("dinp").value = d.toFixed(2);
+        }
+    }
+    function staud(that)
+    {
+        var a = document.getElementById("staud1").value;
+        var b = document.getElementById("staud2").value;
+        var c = a-b;
+         document.getElementById("stin").value = c.toFixed(2);
+        if(a>b)
+        {
+            var d = (c/a)*100;
+            document.getElementById("stinp").value = d.toFixed(2);
+        }
+        else
+        {
+            var d = (c/b)*100;
+             document.getElementById("stinp").value = d.toFixed(2);
+        }
+    }
+    function craud(that)
+    {
+        var a = document.getElementById("craud1").value;
+        var b = document.getElementById("craud2").value;
+        var c = a-b;
+         document.getElementById("crin").value = c.toFixed(2);
+        if(a>b)
+        {
+            var d = (c/a)*100;
+            document.getElementById("crinp").value = d.toFixed(2);
+        }
+        else
+        {
+            var d = (c/b)*100;
+             document.getElementById("crinp").value = d.toFixed(2);
+        }
+    }
+    function naud(that)
+    {
+        var a = document.getElementById("naud1").value;
+        var b = document.getElementById("naud2").value;
+        var c = a-b;
+         document.getElementById("nin").value = c.toFixed(2);
+        if(a>b)
+        {
+            var d = (c/a)*100;
+            document.getElementById("ninp").value = d.toFixed(2);
+        }
+        else
+        {
+            var d = (c/b)*100;
+             document.getElementById("ninp").value = d.toFixed(2);
+        }
+    }
+    
+</script>
+</head>
+<body  bgcolor="#A9A9A9">
+  
+    <center><h1>Welcome to Auditing</h1></center><br><br>
+        <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="button button2" onClick="parent.location='main1.html'">Summary<br><br>List</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <button class="button button2" onClick="parent.location='aud.html'">Introduction <br>& <br>Company Profile</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="button button2" onClick="parent.location='main3.html'">Inventory Control <br>to<br>Insurance Coverage</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button button2" onClick="parent.location='main4.html'">Drawing Power Computation & <br>Banking Conduct</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button button2" onClick="parent.location='main5.html'">Financial<br><br>Information 1<br></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button button2" onClick="parent.location='main6.html'">Financial<br><br>Information2<br></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><center><button class="button button2" onClick="parent.location='main7.html'"><br>Annexure-1<br><br></button><button class="button button2" onClick="parent.location='main8.html'"><br>Annexure-2<br><br></button></center></div>
+          <br><br>     <center><h1>Financial Information</h1></center><br>
+       
+       <center>
+          <form action="fi.php" method="POST">
+              
+       <table width="60%" align="center">																																															
+           <tr><th style="width:160px;">Particulars</th><th>Audit B/S<br><input type="number" min="1999" max="2099" name="year1" value="2015" style="height:30px;width:98%;"><br>-<br><input type="number" min="00" max="99" name="year2" value="16" style="height:30px;width:98%;"></th><th >Audit B/S<br><input type="number" min="1999" max="2099" name="year3" value="2015" style="height:30px;width:98%;"><br>-<br><input type="number" min="00" max="99" value="16" name="year4" style="height:30px;width:98%;"></th><th >Increase/<br>Decrease</th><th >Percentage of<br>Increase/<br>Decrease</th></tr>
+           <tr>
+               <td >Sales</td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="saud1" id="saud1" onchange="saud(this);" required></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="saud2" id="saud2" onchange="saud(this);" required></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="sin" id="sin"  readonly></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="sinp" id="sinp" readonly></td>
+           </tr>
+             <tr>
+               <td>Purchase</td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="paud1" id="paud1" onchange="paud(this);" required></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="paud2" id="paud2" onchange="paud(this);" required></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="pin" id="pin" readonly></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="pinp" id="pinp" readonly></td>
+           </tr>
+             <tr>
+               <td >Debtors</td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="daud1" id="daud1" onchange="daud(this);" required></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="daud2" id="daud2" onchange="daud(this);" required></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="din" id="din" readonly></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="dinp" id="dinp" readonly></td>
+           </tr>
+             <tr>
+               <td >Stocks</td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="staud1" id="staud1" onchange="staud(this);" required></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="staud2" id="staud2" onchange="staud(this);" required></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="stin"  id="stin" readonly></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="stinp" id="stinp" readonly></td>
+           </tr>
+             <tr>
+               <td >Creditors</td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="craud1" id="craud1" onchange="craud(this);" required></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="craud2" id="craud2" onchange="craud(this);" required></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="crin" id="crin" readonly></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="crinp" id="crinp" readonly></td>
+           </tr>
+             <tr>
+               <td>Net Profit</td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="naud1" id="naud1" onchange="naud(this);" required ></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="naud2" id="naud2" onchange="naud(this);" required></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="nin" id="nin" readonly></td>
+           <td style="height:30px;"><input type="number" step="0.01" style="height:30px;width:98%;" name="ninp" id="ninp" required></td>
+           </tr>
+           
+       </table>
+       <br><br>
+        <input type="submit" value="NEXT"  style="height:50px;width:160px;background-color:green;color:white;border-radius:5px;" /> </form>
+       </center>
+          
+    
+    
+    
+</body>
+</html>

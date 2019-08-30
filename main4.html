@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drawing Power Computation</title>
+    <script src="script.js"></script>
+    
+        <style>
+            table,th,td
+            {
+               
+                
+                border-collapse : collapse;
+                
+               
+            }
+            .no-border-right {
+  border-right: solid 1px #FFF;
+   border-left: solid 1px #FFF;
+  
+}
+.tab
+{
+    
+}
+.exec
+{
+    
+}
+.teb
+{
+    border : 1px solid black;
+    background-color:#A5C2DB;
+}
+tr.no
+{
+     border: 0;
+}
+tr.noBorder td {
+  border: 0;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button2 {
+  background-color: white; 
+  color: black; 
+  width:170px;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+        </style>
+               <script>
+  function net(that) {
+      
+   var abc =  document.getElementById("nps").value;
+   
+   document.getElementById("pst").value = "(-)margin @"+abc+" % on paid stock";
+   
+ 
+   
+     
+}  
+  function net1(that) {
+   var abc =  document.getElementById("debp").value;
+   
+   document.getElementById("dep").value = "(-)margin @"+abc+" % on Debtors";
+   
+     
+  }  
+  function net2(that) {
+   var abc =  document.getElementById("debt").value;
+    var c =  document.getElementById("debp").value;
+   g = (c/100);
+   h = abc*(g);
+   document.getElementById("mods").value = h.toFixed(2);
+   
+   var d = abc - h;
+  
+    document.getElementById("dpB").value = d.toFixed(2);
+    e = document.getElementById("dpA").value
+    var tot = +d + +e;
+    document.getElementById("tadp").value = tot.toFixed(2);
+ 
+  
+  }  
+  
+  
+  function calc(that) {
+     var c =  document.getElementById("stock").value;
+   var d =  document.getElementById("cred").value;
+   k = (c - d).toFixed(2);
+   
+   
+   var abc =  document.getElementById("nps").value;
+   
+   var h = (abc/100);
+   if(k>0)
+   {
+    f = g*(h);
+    g = document.getElementById("tps").value = k
+    document.getElementById("mops").value = f.toFixed(2);
+   }
+   else
+   {
+     document.getElementById("tps").value = k;
+     document.getElementById("mops").value = 0;
+     document.getElementById("dpA").value = k;
+   }
+   
+    i = g - f;
+   if(i>0)
+   {
+    document.getElementById("dpA").value = i.toFixed(2);
+   }
+ 
+    
+     
+} 
+ function disp(that) {
+   var ls =  document.getElementById("ls").value;
+   var tadp =  document.getElementById("tadp").value;
+   
+   if(tadp<ls)
+   {
+        document.getElementById("aa").value = "Inadequate";
+   }
+   else
+   {
+       document.getElementById("aa").value = "Adequate";
+   }
+   
+   
+     
+  }  
+ function net3(that) {
+   var a = document.getElementById("stk1").value;
+   var b = document.getElementById("stk2").value;
+   var c = document.getElementById("stk3").value;
+   
+   var d = +b + +c;
+   var e = a - d;
+   document.getElementById("sttot").value = e.toFixed(2); 
+   var f =  document.getElementById("sttot").value;
+    document.getElementById("stock").value = f;
+     
+  }  
+  
+ function check(that) {
+    
+   var a = document.getElementById("cred1").value;
+   var b = document.getElementById("cred2").value;
+   var c = document.getElementById("cred3").value;
+   
+   var d = +a + +b;
+   var e = d - c;
+   document.getElementById("credtot").value = e.toFixed(2); 
+   var f =  document.getElementById("credtot").value;
+    document.getElementById("cred").value = f;
+  }  
+   function net4(that) {
+   var a =  document.getElementById("cc").value;
+   
+   document.getElementById("ls").value = a;
+    document.getElementById("tot1").value = a;
+     
+  }  
+   function net5(that) {
+   var a =  document.getElementById("dep1").value;
+  
+   var b =  document.getElementById("sales1").value;
+   
+   
+   f = (a/b)*100;
+   
+   var g = f.toFixed(2);
+   document.getElementById("depg1").value = g;
+     
+  }  
+  
+   function net6(that) {
+   var a =  document.getElementById("dep2").value;
+ 
+   var b =  document.getElementById("sales2").value;
+  
+   
+   f = (a/b)*100;
+   
+   g = f.toFixed(2);
+   document.getElementById("depg2").value = g;
+     
+  }  
+  
+   function net7(that) {
+   var a =  document.getElementById("dep3").value;
+  
+   var b =  document.getElementById("sales3").value;
+   
+   f = (a/b)*100;
+   
+   g = f.toFixed(2);
+   document.getElementById("depg3").value = g;
+     
+  }  
+  
+   function net8(that) {
+   var a =  document.getElementById("dep4").value;
+  
+   var b =  document.getElementById("sales4").value;
+   
+   
+   f = (a/b)*100;
+   
+   g = f.toFixed(2);
+   document.getElementById("depg4").value = g;
+     
+  }  
+  function deb(that) {
+   var a =  document.getElementById("deb1").value;
+    var b =  document.getElementById("deb2").value;
+     var c =  document.getElementById("deb3").value;
+      var d =  document.getElementById("deb4").value;
+   
+   k = (+a + +b);
+   l = (+c + +d);
+   m = document.getElementById("debtot").value = (k - l).toFixed(2);
+   document.getElementById("debt").value = Math.abs(m); 
+     
+  }  
+  function dag(that) {
+   var a =  document.getElementById("dag1").value;
+    var b =  document.getElementById("dag2").value;
+     var c =  document.getElementById("dag3").value;
+      var d =  document.getElementById("dag4").value;
+   
+   k = (+a + +b);
+   l = (+c + +d);
+   m = document.getElementById("dagtot").value = (+k + +l).toFixed(2);
+    
+  } 
+ 
+        </script>
+ </head>
+ <body bgcolor="#A9A9A9">    
+ 
+    <center><h1>Welcome to Auditing</h1></center><br><br>
+        <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="button button2" onClick="parent.location='main1.html'">Summary<br><br>List</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <button class="button button2" onClick="parent.location='aud.html'">Introduction <br>& <br>Company Profile</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="button button2" onClick="parent.location='main3.html'">Inventory Control <br>to<br>Insurance Coverage</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button button2" onClick="parent.location='main4.html'">Drawing Power Computation & <br>Banking Conduct</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button button2" onClick="parent.location='main5.html'">Financial<br><br>Information 1<br></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button button2" onClick="parent.location='main6.html'">Financial<br><br>Information2<br></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><center><button class="button button2" onClick="parent.location='main7.html'"><br>Annexure-1<br><br></button><button class="button button2" onClick="parent.location='main8.html'"><br>Annexure-2<br><br></button></center></div>
+          <br><br>       
+            <form action="dpc.php" method="POST">
+                <center>
+               <h1>6.Drawing Power Computation</h1>
+           
+             <table class="teb" align="center" width="60%"><tr><td class="teb" colspan="2"><table class="teb" width="100%">
+           <tr class="teb"><td class="teb" colspan="2" ><h3><b>A.Margin</b></h3></td></tr>
+        <tr class="teb"><td class="teb" ><h4><b>.Net paid Stock :<input type="number" max-length="10" name="nps" id="nps" style="width:50px;" onchange="net(this)" required>%</b></h4></td></tr>
+            <tr class="teb"><td class="teb" ><h4><b>.Debtors : <input type="number" max-length="10" name="debp" id="debp" style="width:50px;"  onchange="net1(this)" required>%</b></h4></td></tr>
+            </table></td></tr>
+            <tr><th colspan="2">B.Drawing Power as on <input type="date" name="date1" required></th></tr>
+           <tr><th >Name of Security<br></th><th><u>(Rupees in Lakhs)</u></th></tr>
+           <tr>
+           <td class="teb" style="height:30px;text-align:center;">Stocks</td><td class="teb"><input type="number" step="0.01" name="stock" 
+           id="stock" style="height:30px;width:98%;border-color:blue;" readonly></td></tr>
+           <tr><td class="teb" style="height:30px;text-align:center;">Creditors</td><td class="teb" ><input type="number" step="0.01" 
+           name="cred" id ="cred" onclick="calc(this);" style="height:30px;width:98%;border-color:blue;" readonly></td></tr>
+           <tr><td class="teb" style="height:30px;text-align:center;">Total paid Stock</td><td class="teb"><input type="number" step="0.01" name="tps" id="tps" style="height:30px;width:98%;" readonly></td></tr>
+           <tr><td class="teb" style="height:30px;text-align:center;"><input type="text" id="pst" name="pst" style="width:99%;height:30px;" readonly></td><td class="teb"><input type="number" step="0.01" name="mops" id="mops" style="height:30px;width:98%;" readonly></td></tr>
+            <tr><td class="teb" style="height:30px;text-align:center;">Available Drawing Power aginst inventory(A)</td><td class="teb"><input type="number" step="0.01" name="dpA" id = "dpA"  style="height:30px;width:98%;" readonly></td></tr>
+             <tr><td class="teb" style="height:30px;text-align:center;">Debtors</td><td class="teb"><input type="number" step="0.01" name="debt" id="debt" onclick="net2(this)" style="height:30px;width:98%;border-color:blue;" readonly></td></tr>
+              <tr><td class="teb" style="height:30px;text-align:center;"><b><input type="text" id="dep" name="dep" style="width:99%;height:30px;" readonly></b></td><td class="teb"><input type="number" step="0.01" name="mods" id="mods" style="height:30px;width:98%;" readonly></td></tr>
+              <tr> <td class="teb" style="height:30px;text-align:center;">Available Drawing Power aginst inventory(B)</td><td class="teb"><input type="number" step="0.01" name="dpB" id="dpB" style="height:30px;width:98%;" readonly></td></tr>
+                <tr><th class="teb" style="height:30px;text-align:center;">Total Available Drawing Power = (A) + (B)</th><th class="teb"><input type="number" step="0.01" name="tadp" id="tadp" style="height:30px;width:98%;" readonly></th></tr>
+                <tr><th class="teb" style="height:30px;text-align:center;">Limit Sanctioned</th><th class="teb"><input type="number" step="0.01" name="ls" id="ls" onclick="disp(this);" style="height:30px;width:98%;border-color:blue" readonly></th></tr>
+                <tr><th class="teb">Adequate/Inadequate</th><th colspan="2" class="teb"><input type="text" id="aa" name="aa" style="width:99%;height:30px;" readonly></th></tr>
+           
+           
+           
+           </table><br><br>
+          
+           <br><br><br>
+           <h3>C.Stock</h3>
+           <table class="teb" width="60%">
+             <tr class="teb">
+           <td class="teb" style="height:30px;text-align:left;">1.Total stock as per point no 3A</td><td class="teb"><input type="number" step="0.01" name="stk1" id="stk1" style="height:30px;width:98%;" onchange="net3(this);" required></td></tr>
+           <tr class="teb"><td class="teb" style="height:30px;text-align:left;">2.Obsolete stock value</td><td class="teb" ><input type="number" step="0.01" name="stk2" id ="stk2" style="height:30px;width:98%;" onchange="net3(this);" required></td></tr>
+           <tr class="teb"><td class="teb" style="height:30px;text-align:left;">3.Stock received for job work</td><td class="teb"><input type="number" step="0.01" name="stk3" id="stk3" style="height:30px;width:98%;" onchange="net3(this);" required></td></tr>
+           <tr class="teb"><th style="height:30px;text-align:left;" class="teb">Total stock for drawing power(1-2-3)</th><th><input type="number" step="0.01" name="sttot" id="sttot" style="height:30px;width:98%;" readonly></th></tr>
+         </table><br><br>
+         
+           <h3>D.Creditors</h3>
+           <table class="teb" width="60%">
+             <tr class="teb">
+           <td class="teb" style="height:30px;text-align:left;">1.Total creditors</td><td class="teb"><input type="number" step="0.01" name="cred1" id="cred1" style="height:30px;width:98%;" onchange="check(this);" required></td></tr>
+           <tr class="teb"><td class="teb" style="height:30px;text-align:left;">2.Credit balance in debtors</td><td class="teb" ><input type="number" step="0.01" name="cred2" id ="cred2" style="height:30px;width:98%;" onchange="check(this);" required></td></tr>
+           <tr class="teb"><td class="teb" style="height:30px;text-align:left;">3.Less financial creditors</td><td class="teb"><input type="number" step="0.01" name="cred3" id="cred3" style="height:30px;width:98%;" onchange="check(this);" required></td></tr>
+           <tr class="teb"><th class="teb" style="height:30px;text-align:left;" >Total creditors for drawing power(1+2-3)</th><th><input type="number" step="0.01" name="credtot" id="credtot" style="height:30px;width:98%;" readonly></th></tr>
+         </table><br><br>
+          <h3>E.Debtors</h3>
+           <table class="teb" width="60%">
+             <tr class="teb">
+           <td class="teb" style="height:30px;text-align:left;">1.Total debtors</td><td class="teb"><input type="number" step="0.01" name="deb1" id="deb1" style="height:30px;width:98%;" onchange="deb(this);" required></td></tr>
+           <tr class="teb"><td class="teb" style="height:30px;text-align:left;">2.Debit balance in creditors</td><td class="teb" ><input type="number" step="0.01" name="deb2" id ="deb2" style="height:30px;width:98%;" onchange="deb(this);" required></td></tr>
+           <tr class="teb"><td class="teb" style="height:30px;text-align:left;">3.Debtors pending >credit period</td><td class="teb"><input type="number" step="0.01" name="deb3" id="deb3" style="height:30px;width:98%;" onchange="deb(this);" required></td></tr>
+           <tr class="teb"><td class="teb" style="height:30px;text-align:left;">4.Financial debtors</td><td class="teb"><input type="number" step="0.01" name="deb4" id="deb4" style="height:30px;width:98%;" onchange="deb(this);" required></td></tr>
+             <tr class="teb"><th class="teb" style="height:30px;text-align:left;">Total debtors for drawing power(1+2-3-4)</th><th><input type="number" step="0.01" name="debtot" id="debtot" style="height:30px;width:98%;" readonly></th></tr>
+        
+         </table><br><br>
+         
+          <h3>F. Debtors ageing analysis.</h3>
+           <table class="teb" width="60%">
+             <tr class="teb">
+           <td class="teb" style="height:30px;text-align:left;">1.lessthan 90 days</td><td class="teb"><input type="number" step="0.01" name="dag1" id="dag1" style="height:30px;width:98%;" onchange="dag(this);" required></td></tr>
+           <tr class="teb"><td class="teb" style="height:30px;text-align:left;">2.Greatherthan 90 and lessthan 180 days</td><td class="teb" ><input type="number" step="0.01" name="dag2" id ="dag2" style="height:30px;width:98%;" onchange="dag(this);" required></td></tr>
+           <tr class="teb"><td class="teb" style="height:30px;text-align:left;">3.Greaterthan 180 days</td><td class="teb"><input type="number" step="0.01" name="dag3" id="dag3" style="height:30px;width:98%;" onchange="dag(this);" required></td></tr>
+           <tr class="teb"><td class="teb" style="height:30px;text-align:left;">4.On Account Debtors</td><td class="teb"><input type="number" step="0.01" name="dag4" id="dag4" style="height:30px;width:98%;" onchange="dag(this);" required></td></tr>
+             <tr class="teb"><th class="teb" style="height:30px;text-align:left;">Total debtors (1+2+3+4)</th><th><input type="number" step="0.01" name="dagtot" id="dagtot" style="height:30px;width:98%;" readonly></th></tr>
+        
+         </table><table width="60%">
+            <tr class="tab"><td class="tab"><h3><b>G. Details of party-wise outstanding (whether outstanding of <br>any particular
+debtor is in excess of 5% of the total debtors.) 
+</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="4" cols="90" name="g" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>H. Book debts identified as recoverable.
+ </b></h3></td></tr>
+            <tr><td><b style="font-size:18px;">Doubtful of recovery </b> :</td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="4" cols="30" name="h1" required></TextArea></td></tr>
+            <tr><td><b style="font-size:18px;">Bad Debts </b></td></tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <tr class="tab"><td class="tab"><TextArea rows="4" cols="30" name="h2" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>I. Collection machinery put in place:</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="4" cols="90" name="i" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>J. Whether the borrower has provided for doubtful recovery of book debts.</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="4" cols="90" name="j" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>K. Whether there are any disputes in respect of book debts.</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="4" cols="90" name="k" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>L. Have you located any discrepancy on verification of books of accounts?</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="4" cols="90" name="l" required></TextArea></td></tr>
+            <tr class="tab"><td class="tab"><h3><b>M. Whether there are inter-company/intra-company debtors. <br>Whether all
+the debtors are arising out of commercial transactions?</b></h3></td></tr>
+            <tr class="tab"><td class="tab"><TextArea rows="4" cols="90" name="m" required></TextArea></td></tr>
+            </table>
+            <h2 style="text-align:center">7.Banking Conduct</h2>
+          <h3>Facilty Availed with <input type="text" name="bank1" style="width:100px;height:20px;" required> bank</h3>
+          <table class="teb" width="60%">
+              <tr class="teb"><th style="text-align:center;">Facility</th><th style="text-align:center;width:50%;height:30px;">Limit</th></tr>
+              <tr class="teb"><td class="teb" style="text-align:center;">Cash Credit</td><td class="teb"><input type="number" step="0.01" name="cc" id="cc" onchange="net4(this);" style="width:100%;height:30px;"></td></tr>
+              <tr class="teb"><th style="text-align:center;" class="teb">Total</th><th class="teb"><input type="number" step="0.01" name="tot1" id="tot1" style="width:100%;height:30px;" readonly></th></tr>
+          </table>
+          <br><br><br>
+          
+             <input type="submit" value="NEXT"  style="height:50px;width:160px;background-color:green;color:white;border-radius:5px;"/> 
+             </center>
+             </form>
+             </body>
+             </html>
+

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <title>Company Profile</title>
+         <script type="text/javascript" src="mess.js"></script> 
+        <style>
+            table,th,td
+            {
+                border : 1px solid black;
+                
+                border-collapse : collapse;
+                
+                background-color : #A5C2DB;
+            }
+            .no-border-right {
+  border-right: solid 1px #FFF;
+   border-left: solid 1px #FFF;
+  
+}
+tr.no
+{
+     border: 0;
+}
+tr.noBorder td {
+  border: 0;
+}
+.line
+{
+     position : absolute;
+    height:90px;
+    top :80px;
+}
+#s
+{
+            
+    top : 10px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button2 {
+  background-color: white; 
+  color: black; 
+  width:170px;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+        </style>
+                      <script>
+                   function yesnoCheck(that) {
+    if (that.value == "Proprietorship") 
+    {
+        
+          document.getElementById("ifprop").style.display = "block";
+          
+           document.getElementById("dis").value = "Name of proprietorship";
+           
+    } 
+    
+    
+    else if (that.value == "Partnership") 
+    {
+  
+       document.getElementById("ifprop").style.display = "block";
+       
+       document.getElementById("dis").value = "Name of partnership";
+    } 
+   
+   else if (that.value == "Private Ltd. Company") 
+    {
+        document.getElementById("ifprop").style.display = "block";
+        
+        document.getElementById("dis").value = "Name of directors";
+    } 
+    else if (that.value == "Public Ltd. Company") 
+    {
+        document.getElementById("ifprop").style.display = "block";
+           
+        document.getElementById("dis").value = "Name of directors";
+    } 
+    else 
+    {
+        document.getElementById("ifprop").style.display = "none";
+    }
+   
+}
+        </script>
+ 
+           </head>
+    
+    <body bgcolor="#A9A9A9">
+        
+
+    <center><h1>Welcome to Auditing</h1></center><br><br>
+        <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="button button2" onClick="parent.location='main1.html'">Summary<br><br>List</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <button class="button button2" onClick="parent.location='aud.html'">Introduction <br>& <br>Company Profile</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="button button2" onClick="parent.location='main3.html'">Inventory Control <br>to<br>Insurance Coverage</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button button2" onClick="parent.location='main4.html'">Drawing Power Computation & <br>Banking Conduct</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="button button2" onClick="parent.location='main5.html'">Financial<br><br>Information 1<br></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button button2" onClick="parent.location='main6.html'">Financial<br><br>Information2<br></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><center><button class="button button2" onClick="parent.location='main7.html'"><br>Annexure-1<br><br></button><button class="button button2" onClick="parent.location='main8.html'"><br>Annexure-2<br><br></button></center></div>
+          <br><br><br><br><br><br><br><br>
+          <center><h1><b>Introduction</b></h1></center>
+         <form action="company.php" method="POST">
+            <center>
+            <table width="60%">
+            <tr><th>Company Name :</th><td><input type="text" name="cname" style="height:50px;width:99%;" id="cname" onchange="disp(this);" required></td></tr>
+            <tr><th>Address :</th><td><TextArea rows="4" cols="22" name="address" id="ofadd" style="width:98%;height:100%" onchange="disp(this);" required></TextArea></td></tr>
+            <tr><th>Name of accountants: </th><td><input type="text" name="acname" style="height:50px;width:99%;" required></td></tr>
+           <tr> <th>Date :</th><td><input type="date" name="date" style="height:50px;width:99%;" required></td></tr>
+            </table>
+            <br><br><br>
+          
+            
+            <h1>Company Profile</h1>
+            <table width="60%">
+              
+               <tr>
+                   <td style="text-align:center;">Company Name</td><td style="width:400px;"><input type="text" name="cname1" id="cname1" value="" style="height:30px;width:99%;" onclick="disp(this);" readonly></td>
+               </tr>
+               <tr>
+                   <td style="text-align:center;">Office Address</td><td><TextArea rows="4" cols="60" name="ofadd"
+                   value="" id="ofadd1" style="height:32px;width:98%;" readonly></TextArea>
+               </td>
+               </tr>
+               <tr><td style="text-align:center;">Branch Address</td><td><TextArea rows="4" cols="60" name="badd" style="height:32px;width:98%;" required></TextArea></td>
+               </tr>
+               <tr><td style="text-align:center;">Existing Since</td><td><input type="text" name="since" style="height:30px;width:99%;" required></td>
+               </tr>
+               <tr><td style="text-align:center;">Constitution</td><td><select name ="const" style="height:30px;width:99%;" onchange="yesnoCheck(this);" required>
+                   <option value=""></option>
+    <option value="Proprietorship" >Proprietorship</option>
+  
+    <option value="Partnership" >Partnership</option>
+    <option value="Private Ltd. Company" >Private Ltd. Company</option>
+  
+    <option value="Public Ltd. Company" >Public Ltd. Company</option>
+</select>
+<div id="ifprop" style="display: none;">
+    <label for="car" id="prop">Enter name:<input type="text" name="dis" id="dis" hidden></label> <input type="text" id="car" name="propr" value="" style="height:30px;width:400px;" required/>
+</div>
+</td></tr>
+               <tr><td style="text-align:center;">Nature of Business</td><td><input type="text" name="nob" style="height:30px;width:400px;" ></td></tr>
+               <tr><td style="text-align:center;">Products</td><td>
+                   <input type="text" name="prod" style="height:30px;width:400px;" >
+               <br><input type="text" name="products2" style="height:30px;width:400px;" >
+               <br><input type="text" name="products3" style="height:30px;width:400px;" >
+               <br><input type="text" name="products4" style="height:30px;width:400px;" >
+               <br><input type="text" name="products5" style="height:30px;width:400px;" >
+               <br><input type="text" name="products6" style="height:30px;width:400px;" >
+               <br><input type="text" name="products7" style="height:30px;width:400px;" >
+               <br><input type="text" name="products8" style="height:30px;width:400px;" ></td></tr>
+               <tr><td style="text-align:center;">Group/Sister Concerns</td><td><input type="text" name="concern" style="height:30px;width:400px;" required></td></tr>
+               <tr><td style="text-align:center;">Major Suppliers</td><td><input type="text" name="msupl" style="height:30px;width:400px;"  ><br>
+               <input type="text" name="msupl2" style="height:30px;width:400px;" ><br>
+               <input type="text" name="msupl3" style="height:30px;width:400px;"  ><br>
+               <input type="text" name="msupl4" style="height:30px;width:400px;" ><br>
+               <input type="text" name="msupl5" style="height:30px;width:400px;" ><br>
+               <input type="text" name="msupl6" style="height:30px;width:400px;" ><br>
+               <input type="text" name="msupl7" style="height:30px;width:400px;"  ><br>
+               <input type="text" name="msupl8" style="height:30px;width:400px;" ><br>
+               </td></tr>
+               <tr><td style="text-align:center;">Major Customers</td><td><input type="text" name="mcust" style="height:30px;width:400px;" ><br>
+               <input type="text" name="mcust2" style="height:30px;width:400px;"  ><br>
+               <input type="text" name="mcust3" style="height:30px;width:400px;"  ><br>
+               <input type="text" name="mcust4" style="height:30px;width:400px;" ><br>
+               <input type="text" name="mcust5" style="height:30px;width:400px;"  ><br>
+               <input type="text" name="mcust6" style="height:30px;width:400px;"  ><br>
+               <input type="text" name="mcust7" style="height:30px;width:400px;"  ><br>
+               <input type="text" name="mcust8" style="height:30px;width:400px;"  >
+               </td></tr>
+               </table><br><br><br>
+               <input type="submit" value="NEXT"  style="height:50px;width:160px;background-color:green;color:white;border-radius:5px;"/>
+               </center>
+               
+               <br><br><br> 
+               
+               </form>
+               
+    </body>
+</html>
